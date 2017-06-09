@@ -7,7 +7,7 @@ Comparative tax
 -	Les CDN Jquery et Bootstrap ont été ajoutés dans la vue par défaut.
 
 ## Objectifs
--	Créer un formulaire d’ajout d’un article comprenant un montant HT et afficher les valeurs pour le Luxembourg (TVA à 17 %) et la France (TVA à 20 %).
+-	Créer un formulaire d’ajout d’un article comprenant un montant HT et afficher les valeurs pour le taux 1 TVA à 17 % et le taux 2 TVA à 3 %.
 -	Visualiser ces valeurs dans une vue responsive design basée sur Bootstrap et Twig.
 -	Constater que les modes de calcul de TVA pour le Luxembourg et la France ont été testés unitairement.
 -	Le travail devra être commité dans une branche local
@@ -33,8 +33,8 @@ Liste de sélection :
 Date_creation – Label
 - Si description afficher description
 - Montant HT : xxx €
-- Montant TTC Lu (Drapeau Lu) :  xxx € 	
-- Montant TTC Fr (Drapeau Fr) :  xxx €	
+- Montant TTC taux 1 :  xxx € 	
+- Montant TTC taux 2 :  xxx €	
 
 ## Informations complémentaires
 -	URL local : http://comparatif-taxes.localhost/interact
