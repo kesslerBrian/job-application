@@ -30,7 +30,7 @@ Liste de sélection :
 -	Montant TTC taux 1 seulement 
 -	Montant TTC taux 2 seulement 
 
-- Date_creation – Label
+Date_creation – Label
 - Si description afficher description
 - Montant HT : xxx €
 - Montant TTC Lu (Drapeau Lu) :  xxx € 	
