@@ -1,0 +1,163 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Interact - Test{% endblock %}
+
+{% block body %}
+    <nav class="navbar navbar-default navbar-fixed-top" style="">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    {% image '@AppBundle/Resources/public/images/logo-interact.png' %}
+                    <img src="{{ asset_url }}" alt="Example" width="100px" style="margin-top: -10px"/>
+                    {% endimage %}
+                </a>
+
+            </div>
+        </div>
+    </nav>
+    <div class="content" style="margin-top: 7%">
+        <div class="page-header">
+            <h1>Comparative tax<small>&nbsp;-&nbsp;</small></h1>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Environnement</h1>
+            </div>
+            <div class="col-md-12">
+                <div class="alert alert-info">
+                    <ul>
+                        <li>Une VM Vagrant est fournie intégrant Apache, PHP 7 et une BDD MariaDB</li>
+                        <li>Une application Symfony 2.8 par défaut est fournie</li>
+                        <li>Les CDN Jquery et Bootstrap ont été ajoutés dans la vue base.html.twig</li>
+                        <li>La librairie PHPUnit</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <h1>Objectifs</h1>
+            </div>
+            <div class="col-md-12">
+                <div class="alert alert-success">
+                    <ul>
+                        <li>Créer un formulaire d’ajout d’un article comprenant un montant HT</li>
+                        <li>Calculer le montant TTC pour un taux 1 de TVA à 17% et taux 2 de TVA à 3%</li>
+                        <li>Visualiser ces valeurs dans une vue responsive design basée sur Bootstrap et Twig</li>
+                        <li>Constater que les modes de calcul de TVA pour le Luxembourg et la France ont été testés unitairement</li>
+                        <li>Créer une branche local et y soumettre le travail terminé</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <h1>Données</h1>
+            </div>
+            <div class="col-md-12">
+                <div class="alert alert-warning">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Attributs</th>
+                                <th>Type</th>
+                                <th>Contrainte</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Label</td>
+                                <td>String (100)</td>
+                                <td>Not null</td>
+                            </tr>
+                            <tr>
+                                <td>Description</td>
+                                <td>String (255)</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>AmountHT</td>
+                                <td>Float</td>
+                                <td>Not null and > 0</td>
+                            </tr>
+                            <tr>
+                                <td>Creation</td>
+                                <td>Datetime</td>
+                                <td>Current datetime</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <h1>Formules de calculs</h1>
+            </div>
+            <div class="col-md-12">
+                <div class="alert alert-warning">
+                    <ul>
+                        <li>Montant TTC Taux 1  = MontantHT * 1,17</li>
+                        <li>Montant TTC Taux 2 = MontantHT * 1,03</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <h1>Vue générale</h1>
+            </div>
+            <div class="col-md-12">
+                <div class="alert alert-warning">
+                    <div class="row">
+                        <div class="col-md-1">
+                            Afficher :
+                        </div>
+                        <div class="col-md-6">
+                            <select>
+                                <option value="all" selected>Tout</option>
+                                <option value="taux1">Seulement les montants TTC avec le taux 1</option>
+                                <option value="taux2">Seulement les montants TTC avec le taux 2</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h2>Date_creation – Label</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p>Si description afficher description</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h5>Montant HT</h5>
+                        </div>
+                        <div class="col-md-4">
+                            <h5>Montant TTC Taux 1</h5>
+                        </div>
+                        <div class="col-md-4">
+                            <h5>Montant TTC Taux 2</h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h5>100 €</h5>
+                        </div>
+                        <div class="col-md-4">
+                            <h5>117 €</h5>
+                        </div>
+                        <div class="col-md-4">
+                            <h5>103 €</h5>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-12">
+                <h1>Informations complémentaires</h1>
+            </div>
+            <div class="col-md-12">
+                <div class="alert alert-info">
+                    <ul>
+                        <li>URL local : <a href="http://comparative-taxes.localhost/interact" target="_blank">http://comparative-taxes.localhost/interact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

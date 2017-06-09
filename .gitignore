@@ -1,0 +1,26 @@
+# Created by .ignore support plugin (hsz.mobi)
+/web/bundles/
+/app/bootstrap.php.cache
+/app/cache/
+/app/logs/
+/app/config/parameters.yml
+/build/
+/vendor/
+/bin/
+/composer.phar
+/phpunit.phar
+/.idea
+/web/bower_components/
+/web/js/
+/web/css/
+!web/uploads/.gitkeep
+/web/uploads/*
+npm-debug.log
+*~
+*node_modules/
+composer.lock
+*.stackdump
+.vagrant/
+html/
+puphpet/config-custom.yaml
+.php_cs.cache
