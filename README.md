@@ -9,7 +9,7 @@ Comparative taxes
 ## Objectifs
 -	Créer un formulaire d’ajout d’un article comprenant un montant HT et afficher les valeurs pour le taux 1 TVA à 17 % et le taux 2 TVA à 3 %.
 -	Visualiser ces valeurs dans une vue responsive design basée sur Bootstrap et Twig.
--	Constater que les modes de calcul de TVA pour le Luxembourg et la France ont été testés unitairement.
+-	Constater que les modes de calcul de TVA pour le taux 1 et le taux 2 ont été testés unitairement.
 -	Le travail devra être commité dans une branche local
 
 ## Données à remplir
