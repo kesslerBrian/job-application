@@ -1,4 +1,4 @@
-Comparative tax
+Comparative taxes
 =================
 
 ## Environnement
