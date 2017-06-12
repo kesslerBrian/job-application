@@ -63,4 +63,5 @@ Si description afficher description<br />
 - Montant TTC taux 2 :  xxx €	
 
 ## Informations complémentaires
--	URL local : http://comparatif-taxes.localhost/interact
+- URL local : http://comparatif-taxes.localhost/interact
+- Se positionner à la racine du projet alias unix : goto-project 
