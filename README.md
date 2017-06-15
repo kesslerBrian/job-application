@@ -65,3 +65,5 @@ Si description afficher description<br />
 ## Informations complémentaires
 - URL local : http://comparatif-taxes.localhost/interact
 - Se positionner à la racine du projet alias unix : goto-project 
+- Se connecter à la machine Vagrant en SSH via la commande <strong>vagrant ssh</strong></li>
+- Exemple de test unitaire : phpunit --bootstrap src/AppBundle/DemoTest/Email.php src/AppBundle/Tests/EmailTest.php
