@@ -47,7 +47,7 @@ Comparative taxes
 
 ## Formules de calcul
 Montant TTC taux 1 = MontantHT * 1,17<br />
-Montant TTC taux 2 = MontantHT * 1,20
+Montant TTC taux 2 = MontantHT * 1,03
 
 ## Vue à obtenir
 Filtre : <br />
