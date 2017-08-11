@@ -67,3 +67,4 @@ Si description afficher description<br />
 - Se positionner à la racine du projet alias unix via la commande <strong>goto-project</strong> 
 - Se connecter à la machine Vagrant en SSH via la commande <strong>vagrant ssh</strong></li>
 - Exemple de test unitaire : <strong>phpunit --bootstrap src/AppBundle/DemoTest/Email.php src/AppBundle/Tests/EmailTest.php<strong>
+- Il se peut que le projet necessite quelques modifications afin d'être fonctionnel
