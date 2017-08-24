@@ -63,9 +63,9 @@ Si description afficher description<br />
 - Montant TTC taux 2 :  xxx €	
 
 ## Informations complémentaires
-- URL local : http://comparatif-taxes.localhost/interact
+- URL local : http://comparative-taxes.localhost/interact
 - Se positionner à la racine du projet alias unix via la commande <strong>goto-project</strong> 
 - Se connecter à la machine Vagrant en SSH via la commande <strong>vagrant ssh</strong></li>
-- Exemple de test unitaire : <strong>phpunit --bootstrap src/AppBundle/DemoTest/Email.php src/AppBundle/Tests/EmailTest.php<strong>
+- Exemple de test unitaire : **phpunit --bootstrap src/AppBundle/DemoTest/Email.php src/AppBundle/Tests/EmailTest.php**
 - Il se peut que le projet necessite quelques modifications afin d'être fonctionnel
 - Le projet necessite d'installer PHPunit
