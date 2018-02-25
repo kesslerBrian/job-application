@@ -43,7 +43,7 @@ vagrantfile:
             vflsf_rvcqtr4yplq0:
                 owner: www-data
                 group: www-data
-                source: ./
+                source: /Applications/MAMP/htdocs/jobApplication
                 target: /var/www
                 sync_type: nfs
                 smb:
@@ -51,8 +51,8 @@ vagrantfile:
                     smb_username: ''
                     smb_password: ''
                     mount_options:
-                        dir_mode: '0775'
-                        file_mode: '0774'
+                        dir_mode: '775'
+                        file_mode: '774'
                 rsync:
                     args:
                         - '--quiet'

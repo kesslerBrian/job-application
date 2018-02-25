@@ -1,3 +1,7 @@
+taxes:
+    resource: "@TaxesBundle/Resources/config/routing.yml"
+    prefix:   /
+
 app:
     resource: '@AppBundle/Controller/'
     type: annotation
