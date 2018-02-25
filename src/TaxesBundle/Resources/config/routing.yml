@@ -1,0 +1,8 @@
+articles_admin:
+    resource: "@TaxesBundle/Resources/config/routing/admin.yml"
+    prefix: /articles
+
+articles_public:
+    resource: "@TaxesBundle/Resources/config/routing/public.yml"
+
+

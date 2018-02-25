@@ -1,0 +1,56 @@
+{% extends 'baseCustom.html.twig' %}
+
+{% block title %}Ajout d'un article{% endblock %}
+
+{% block stylesheet %}
+    <link rel="stylesheet" href="{{ asset('asset/css/style.css') }}" />
+
+{% endblock %}
+
+{% block body %}
+    <div class="content">
+        <div class="page-header">
+            <h1>Ajout d'un article</h1>
+        </div>
+
+        {{ form_start(form) }}
+        {{ form_errors(form) }}
+
+        <div class="formLayout">
+            <div class="row">
+                <div class="col-xs-7">
+                    <div class="form-group">
+                        {{ form_label(form.labelName, 'Nom') }}
+                        {{ form_widget(form.labelName, {'attr': {'class': 'form-control'}}) }}
+                        <span class="alert-danger">{{ form_errors(form.labelName) }}</span>
+                    </div>
+
+                    <div class="form-group">
+                        {{ form_label(form.description, 'Description') }}
+                        {{ form_widget(form.description, {'attr': {'class': 'form-control'}}) }}
+                        <span class="alert-danger">{{ form_errors(form.description) }}</span>
+                    </div>
+
+                    <div class="form-group">
+                        {{ form_label(form.amountHt, 'Prix HT') }}
+                        {{ form_widget(form.amountHt, {'attr': {'class': 'form-control'}}) }}
+                        <span class="alert-danger">{{ form_errors(form.amountHt) }}</span>
+                    </div>
+
+                    <div class="form-group">
+                        {{ form_widget(form.save, {'attr': {'class': 'btn btn-primary', 'label': 'Enregistrer cette article'}}) }}
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        {{ form_rest(form) }}
+        {{ form_end(form) }}
+
+
+    </div>
+{% endblock %}

@@ -1,0 +1,3 @@
+taxes_homepage:
+    path:     /
+    defaults: { _controller: TaxesBundle:ArticlesPublic:index }

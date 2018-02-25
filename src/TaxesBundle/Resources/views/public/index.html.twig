@@ -1,0 +1,75 @@
+{% extends 'baseCustom.html.twig' %}
+{% block bodyClass %}articlesList{% endblock %}
+
+
+{% block stylesheet %}
+    <link rel="stylesheet" href="{{ asset('asset/css/style.css') }}" />
+{% endblock %}
+
+{% block javascripts %}
+    <script type="text/javascript" src="{{ asset('asset/js/filter.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+    <div class="content">
+        <div class="page-header">
+            <h1>Articles</h1>
+        </div>
+    <div class="link">
+        <a href="{{ path('admin_articles_add') }}" class="btn btn-primary">Ajouter un article</a>
+    </div>
+    {% if articles %}
+        <div class="col-md-12">
+
+            <div class="row">
+                <div class="col-md-1">
+                    Afficher :
+                </div>
+                <div class="col-md-6">
+                    <select class="filter">
+                        <option value="all" selected>Tout</option>
+                        <option value="taux1">Seulement les montants TTC avec le taux 1</option>
+                        <option value="taux2">Seulement les montants TTC avec le taux 2</option>
+                    </select>
+                </div>
+            </div>
+            {% for article in articles %}
+                <div class="article">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h2>{{ article.creation|date("d/m/Y") }} – {{ article.labelName }}</h2>
+                        </div>
+                    </div>
+                    {% if article.description %}
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p>{{ article.description }}</p>
+                        </div>
+                    </div>
+                    {% endif %}
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h5>Montant HT</h5>
+                            <h5>{{ article.amountHt }} €</h5>
+                        </div>
+                        <div class="col-md-4" data-taux="taux2">
+                            <h5>Montant TTC Taux 1</h5>
+                            <h5>{{ article.taxeOne }} €</h5>
+                        </div>
+                        <div class="col-md-4" data-taux="taux1">
+                            <h5>Montant TTC Taux 2</h5>
+                            <h5>{{ article.taxeTwo }} €</h5>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% else %}
+        <div class="row">
+            <div class="col-md-12">
+                <p class="noProduct">Il n'y a actuellement aucun article.</p>
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}
